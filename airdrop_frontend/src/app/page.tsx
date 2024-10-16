@@ -8,6 +8,8 @@ import { getContract, prepareContractCall } from "thirdweb";
 import { sepolia } from "thirdweb/chains";
 import { toWei } from "thirdweb/utils";
 import { client } from "./client";
+import Image from 'next/image'
+import cat from "../../public/cat.png"
 
 export default function Home() {
   const [addresses, setAddresses] = useState("");
@@ -89,6 +91,11 @@ export default function Home() {
       >
         Airdrop
       </button>
+
+      <div className="flex flex-col items-center">
+        <h2 className="text-3xl text-blue-400 font-bold">vote for team surya!!!</h2>
+        <Image src={cat} width={1000} height={100} alt="cat" />
+      </div>
     </main>
   );
 }
